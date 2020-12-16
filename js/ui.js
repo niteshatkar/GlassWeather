@@ -24,6 +24,7 @@ class UI {
         this.feels.innerHTML = `Feels Like ${feels_temp}` + "<sup>°</sup>C";
         const icon = weather.weather[0].icon;
         this.img.setAttribute('src', `assest/weather-icons-svgs/${icon}.svg`);
+        console.log(img);
     }
 
     paintErr() {
