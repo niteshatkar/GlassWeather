@@ -10,6 +10,7 @@ h1{
     font-weight: 700;
     color: #eee;
     z-index: 55;
+    margin-top: -25px;
 }
 
 h2,h3,h4{
@@ -152,17 +153,25 @@ body::after{
     flex-direction: column;
 }
 
-footer{
-    z-index: 15;
+.container footer{
+    z-index: 10;
     margin-top: 15px;
+}
+
+.copy{
+    font-weight: 200;
+    font-size: 1.2em;
 }
 
 .link{
     text-decoration: none;
+    color: black;
+    font-weight: 200;
+    font-size: 1.2em;
 }
 
-.linkedin{
-    width:20%;
+.link:active, link:focus, link:visited{
+    text-decoration: none;
 }
 
 /* Media query for desktop */
