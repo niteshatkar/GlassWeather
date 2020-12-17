@@ -95,12 +95,16 @@ body::after{
     z-index: 11;
 }
 
-.card .date{
-    margin-top: 10px;
-}
-
 .card .content{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .date{
+    margin-top: 10px;
 }
 
 .card .content img{
@@ -146,11 +150,6 @@ body::after{
     border: 3px solid rgb(128, 177, 233);
     transform: translateY(-5px);
 
-}
-
-.content .extra {
-    display: flex;
-    flex-direction: column;
 }
 
 .container footer{
