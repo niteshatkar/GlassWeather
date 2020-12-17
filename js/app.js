@@ -10,8 +10,8 @@ VanillaTilt.init(document.querySelector(".card"), {
     gyroscope: true,
     gyroscopeMinAngleX: -65,
     gyroscopeMaxAngleX: 65,
-    gyroscopeMinAngleY: -65,
-    gyroscopeMaxAngleY: 65
+    gyroscopeMinAngleY: -25,
+    gyroscopeMaxAngleY: 25
 });
 
 // Get Date Date Month Year
