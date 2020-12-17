@@ -3,11 +3,10 @@
 VanillaTilt.init(document.querySelector(".card"), {
     reverse: true,
     max: 25,
-    speed: 800,
+    speed: 300,
     // axis: 'x'
     glare: true,
     "max-glare": 0.3,
-    reset: true,
     gyroscope: true,
     gyroscopeMinAngleX: -45,
     gyroscopeMaxAngleX: 45,
