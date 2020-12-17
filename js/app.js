@@ -1,6 +1,7 @@
 // Vanilla Tilt
 
 VanillaTilt.init(document.querySelector(".card"), {
+    reverse: true,
     max: 25,
     speed: 800,
     axis: 'x',
