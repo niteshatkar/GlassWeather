@@ -1,17 +1,16 @@
 // Vanilla Tilt
 
 VanillaTilt.init(document.querySelector(".card"), {
-    reverse: true,
-    max: 50,
+    max: 35,
     speed: 300,
     // axis: 'x'
     glare: true,
     "max-glare": 0.3,
     gyroscope: true,
-    gyroscopeMinAngleX: -45,
-    gyroscopeMaxAngleX: 45,
-    gyroscopeMinAngleY: -45,
-    gyroscopeMaxAngleY: 45
+    gyroscopeMinAngleX: -25,
+    gyroscopeMaxAngleX: 25,
+    gyroscopeMinAngleY: -25,
+    gyroscopeMaxAngleY: 25
 });
 
 // Get Date Date Month Year
