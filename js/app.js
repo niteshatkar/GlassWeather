@@ -8,8 +8,8 @@ VanillaTilt.init(document.querySelector(".card"), {
     "max-glare": 0.3,
     reset: true,
     gyroscope: true,
-    gyroscopeMinAngleX: -45,
-    gyroscopeMaxAngleX: 45,
+    gyroscopeMinAngleX: -25,
+    gyroscopeMaxAngleX: 25,
     gyroscopeMinAngleY: -45,
     gyroscopeMaxAngleY: 45
 });
