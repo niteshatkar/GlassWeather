@@ -4,15 +4,15 @@ VanillaTilt.init(document.querySelector(".card"), {
     reverse: true,
     max: 25,
     speed: 800,
-    axis: 'x',
+    // axis: 'x',
     glare: true,
     "max-glare": 0.3,
     reset: true,
     gyroscope: true,
-    gyroscopeMinAngleX: -65,
-    gyroscopeMaxAngleX: 65,
-    gyroscopeMinAngleY: -65,
-    gyroscopeMaxAngleY: 65
+    gyroscopeMinAngleX: -45,
+    gyroscopeMaxAngleX: 45,
+    gyroscopeMinAngleY: -45,
+    gyroscopeMaxAngleY: 45
 });
 
 // Get Date Date Month Year
