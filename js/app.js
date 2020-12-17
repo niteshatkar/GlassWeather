@@ -5,7 +5,6 @@ VanillaTilt.init(document.querySelector(".card"), {
     speed: 300,
     glare: true,
     "max-glare": 0.3,
-    reset: false,
     gyroscope: true,
     gyroscopeMinAngleX: -25,
     gyroscopeMaxAngleX: 25,
