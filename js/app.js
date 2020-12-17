@@ -4,7 +4,7 @@ VanillaTilt.init(document.querySelector(".card"), {
     reverse: true,
     max: 25,
     speed: 800,
-    // axis: 'x',
+    // axis: 'x'
     glare: true,
     "max-glare": 0.3,
     reset: true,
