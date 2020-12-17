@@ -145,6 +145,7 @@ body::after{
     z-index: 15;
     cursor: pointer;
 }
+
 .content input[type=button]:active, .content input[type=button]:hover, .content input[type=button]:focus{
     outline: none;
     border: 3px solid rgb(128, 177, 233);
