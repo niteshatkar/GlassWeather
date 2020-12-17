@@ -9,7 +9,7 @@
 
 ### Screenshots
 
-![Desktop](./assest/screenshots/ss-desk.png "Desktop") 
+![Desktop](./assest/screenshot/ss-desk.png "Desktop") 
 
 ---
 
