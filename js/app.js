@@ -1,15 +1,15 @@
 // Vanilla Tilt
 
-VanillaTilt.init(document.querySelector(".card"), {
-    max: 35,
-    speed: 300,
-    glare: true,
-    "max-glare": 0.3,
-    gyroscope: true,
-    gyroscopeMinAngleX: -25,
-    gyroscopeMaxAngleX: 25,
-    gyroscopeMinAngleY: -25,
-    gyroscopeMaxAngleY: 25
+VanillaTilt.init(document.querySelector('.card'), {
+  max: 35,
+  speed: 300,
+  glare: true,
+  'max-glare': 0.3,
+  gyroscope: true,
+  gyroscopeMinAngleX: -25,
+  gyroscopeMaxAngleX: 25,
+  gyroscopeMinAngleY: -25,
+  gyroscopeMaxAngleY: 25,
 });
 
 // Get Date Date Month Year
@@ -23,68 +23,68 @@ let year = calender.getFullYear();
 // Get Day
 
 switch (calender.getDay()) {
-    case 0:
-        day = 'Sunday';
-        break;
-    case 1:
-        day = 'Monday';
-        break;
-    case 2:
-        day = 'Tuesday';
-        break;
-    case 3:
-        day = 'Wednesday';
-        break;
-    case 4:
-        day = 'Thursday'
-        break;
-    case 5:
-        day = 'Friday';
-        break;
-    case 6:
-        day = 'Saturday';
-        break;
+  case 0:
+    day = 'Sunday';
+    break;
+  case 1:
+    day = 'Monday';
+    break;
+  case 2:
+    day = 'Tuesday';
+    break;
+  case 3:
+    day = 'Wednesday';
+    break;
+  case 4:
+    day = 'Thursday';
+    break;
+  case 5:
+    day = 'Friday';
+    break;
+  case 6:
+    day = 'Saturday';
+    break;
 }
 
 // Get Month
 
 switch (calender.getMonth()) {
-    case 0:
-        month = 'January'
-        break;
-    case 1:
-        month = 'February'
-        break;
-    case 2:
-        month = 'March'
-        break;
-    case 3:
-        month = 'April'
-        break;
-    case 4:
-        month = 'May'
-        break;
-    case 5:
-        month = 'June'
-        break;
-    case 6:
-        month = 'July'
-        break;
-    case 7:
-        month = 'August'
-        break;
-    case 8:
-        month = 'September'
-        break;
-    case 9:
-        month = 'October'
-        break;
-    case 10:
-        month = 'November'
-        break;
-    case 11:
-        month = 'December'
-        break;
+  case 0:
+    month = 'January';
+    break;
+  case 1:
+    month = 'February';
+    break;
+  case 2:
+    month = 'March';
+    break;
+  case 3:
+    month = 'April';
+    break;
+  case 4:
+    month = 'May';
+    break;
+  case 5:
+    month = 'June';
+    break;
+  case 6:
+    month = 'July';
+    break;
+  case 7:
+    month = 'August';
+    break;
+  case 8:
+    month = 'September';
+    break;
+  case 9:
+    month = 'October';
+    break;
+  case 10:
+    month = 'November';
+    break;
+  case 11:
+    month = 'December';
+    break;
 }
 
 // Add calender to UI
@@ -118,43 +118,40 @@ document.addEventListener('DOMContentLoaded', getWeather);
 // On save change city and repaint
 
 document.querySelector('.save').addEventListener('click', (e) => {
+  const city_input = document.querySelector('.city').value;
 
+  // Change Location
+  weather.changeLocation(city_input);
 
-    const city_input = document.querySelector('.city').value;
+  // Set City in LS
+  storage.setWeather(city_input);
 
-    // Change Location
-    weather.changeLocation(city_input);
+  //Repaint UI
+  getWeather();
 
-    // Set City in LS
-    storage.setWeather(city_input);
-
-    //Repaint UI
-    getWeather();
-
-    // Clear Input
-    document.querySelector('.city').value = '';
+  // Clear Input
+  document.querySelector('.city').value = '';
 });
 
 // Get weather function
 
 function getWeather() {
-    weather.fetchWeather()
-        .then(result => {
+  weather
+    .fetchWeather()
+    .then((result) => {
+      // Paint result
+      ui.paint(result);
 
-            // Paint result
-            ui.paint(result);
-
-            // IF LIMIT REACHED
-            if (result.cod === 429)
-                ui.paintExceeded();
-        })
-        .catch(err => {
-            if (err instanceof TypeError) {
-                ui.paintErr();
-                setTimeout(() => {
-                    location.reload();
-                }, 2000);
-                storage.setWeather('mumbai');
-            }
-        });
+      // IF LIMIT REACHED
+      if (result.cod === 429) ui.paintExceeded();
+    })
+    .catch((err) => {
+      if (err instanceof TypeError) {
+        ui.paintErr();
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
+        storage.setWeather('mumbai');
+      }
+    });
 }
