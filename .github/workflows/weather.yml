@@ -27,3 +27,5 @@ jobs:
       - name: Get key
         env:
           Weather_KEY: ${{secrets.WEATHER_API_KEY}}
+        run:  
+            hello weather
