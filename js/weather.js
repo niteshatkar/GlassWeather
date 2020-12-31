@@ -1,5 +1,5 @@
 // Weather Class
-const weather_key = process.env.WEATHER_API_KEY;
+const weather_key = process.env.WEATHER_API;
 console.log(weather_key);
 
 class Weather {
