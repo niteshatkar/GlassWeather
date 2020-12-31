@@ -25,15 +25,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: Deploy
+      - name: Build
         run: |
           npm install
           npm run-script
         env:
           WEATHER_API_KEY: 21bd48b3fa575a5d667fd4d40026351e
-            echo $(WEATHER_API_KEY)
 
       - name: Deploy 🚀
+          echo $WEATHER_API_KEY
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
