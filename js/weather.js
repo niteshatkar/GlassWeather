@@ -1,4 +1,5 @@
 // Weather Class
+require('dotenv').config()
 const weather_key = process.env.WEATHER_API;
 console.log(weather_key);
 
