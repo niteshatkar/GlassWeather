@@ -1,0 +1,23 @@
+{
+  "name": "gw",
+  "version": "1.0.0",
+  "description": "Simple Weather UI Showcasing Glassmorphism Design",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niteshatkar/GlassmorphismWeather.git"
+  },
+  "keywords": [
+    "weather",
+    "glassmorphism"
+  ],
+  "author": "Nitesh Atkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niteshatkar/GlassmorphismWeather/issues"
+  },
+  "homepage": "https://github.com/niteshatkar/GlassmorphismWeather#readme"
+}
