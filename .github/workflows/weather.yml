@@ -29,9 +29,9 @@ jobs:
         run: |
           npm install
           npm run-script
-          echo $WEATHER_API_KEY
+          echo ${{ secrets.WEATHER_API_KEY }}
         env:
-          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+          WEATHER_API: ${{ secrets.WEATHER_API_KEY }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
