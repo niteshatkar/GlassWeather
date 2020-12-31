@@ -31,7 +31,7 @@ jobs:
           npm run-script
         env:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-            echo $WEATHER_API_KEY
+            echo "$WEATHER_API_KEY"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
